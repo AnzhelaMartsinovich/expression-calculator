@@ -2,25 +2,25 @@ const { expect } = require('chai');
 const { expressionCalculator } = require('./src/index.js');
 
 describe("Easy", function() {
-    it("Test simple addition", function() {
+    it("Test simple addition", function () {
         const expr = "2 + 2";
         const result = 4;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
-    it("Test simple subtraction", function() {
+    it("Test simple subtraction", function () {
         const expr = "2-2";
         const result = 0;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
-    it("Test simple multiplication", function() {
+    it("Test simple multiplication", function () {
         const expr = "2*3";
         const result = 6;
         expect(expressionCalculator(expr)).to.equal(result);
     });
 
-    it("Test simple division", function() {
+    it("Test simple division", function () {
         const expr = "1/2";
         const result = 0.5;
         expect(expressionCalculator(expr)).to.equal(result);
@@ -32,7 +32,7 @@ describe("Easy", function() {
     });
 
     
-    it("Mixed base test 1", function() {
+    it("Mixed base test 1", function () {
         const expr = " 49 * 63 / 58 * 36 ";
         const result = 1916.0690;
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
@@ -44,19 +44,19 @@ describe("Easy", function() {
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
     });
     
-    it("Mixed base test 3", function() {
+    it("Mixed base test 3", function () {
         const expr = " 48 + 59 * 86 * 92 * 23 ";
         const result = 10736632.0000;
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
     });
     
-    it("Mixed base test 4", function() {
+    it("Mixed base test 4", function () {
         const expr = " 16 + 25 - 92 + 54 / 66 ";
         const result = -50.1818;
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
     });
     
-    it("Mixed base test 5", function() {
+    it("Mixed base test 5", function () {
         const expr = " 64 + 19 - 77 - 93 ";
         const result = -87.0000;
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
@@ -68,7 +68,7 @@ describe("Easy", function() {
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
     });
     
-    it("Mixed base test 7", function() {
+    it("Mixed base test 7", function () {
         const expr = " 99 * 55 / 30 + 50 ";
         const result = 231.5000;
         expect(Number(expressionCalculator(expr).toFixed(4))).to.equal(result);
